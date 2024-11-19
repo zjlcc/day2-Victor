@@ -43,4 +43,21 @@ public class MarsRover {
     public void turnRight(){
         direction = this.turnRightMap.get(direction);
     }
+
+    public void moveForward(){
+        switch (direction) {
+            case "N":
+                yCoordinate++;
+                break;
+            case "S" :
+                yCoordinate--;
+                break;
+            case "E" :
+                xCoordinate++;
+                break;
+            case "W" :
+                xCoordinate--;
+                break;
+        }
+    }
 }

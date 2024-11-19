@@ -91,4 +91,44 @@ public class MarsRoverTest {
         //then
         assertEquals("1:0:S", status);
     }
+    @Test
+    public void should_x_increase_face_east_when_move_forward_given_orient_east(){
+        //given
+        MarsRover marsRover = new MarsRover(1, 1, "E");
+        //when
+        marsRover.moveForward();
+        String status = marsRover.getStatus();
+        //then
+        assertEquals("2:1:E", status);
+    }
+    @Test
+    public void should_x_reduce_face_west_when_move_forward_given_orient_west(){
+        //given
+        MarsRover marsRover = new MarsRover(1, 1, "W");
+        //when
+        marsRover.moveForward();
+        String status = marsRover.getStatus();
+        //then
+        assertEquals("0:1:W", status);
+    }
+    @Test
+    public void should_y_increase_face_north_when_move_forward_given_orient_north(){
+        //given
+        MarsRover marsRover = new MarsRover(1, 1, "N");
+        //when
+        marsRover.moveForward();
+        String status = marsRover.getStatus();
+        //then
+        assertEquals("1:2:N", status);
+    }
+    @Test
+    public void should_y_reduce_face_south_when_move_forward_given_orient_south(){
+        //given
+        MarsRover marsRover = new MarsRover(1, 1, "S");
+        //when
+        marsRover.moveForward();
+        String status = marsRover.getStatus();
+        //then
+        assertEquals("1:0:S", status);
+    }
 }
