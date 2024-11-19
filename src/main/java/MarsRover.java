@@ -35,4 +35,8 @@ public class MarsRover {
     public String getStatus() {
         return xCoordinate+":"+yCoordinate+":"+direction;
     }
+
+    public void turnLeft(){
+        direction = this.turnLeftMap.get(direction);
+    }
 }
