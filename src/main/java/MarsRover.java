@@ -60,4 +60,16 @@ public class MarsRover {
                 break;
         }
     }
+
+    public void executeCommand(String command) {
+        if("L".equals(command)) {
+            turnLeft();
+        }
+        if("R".equals(command)){
+            turnRight();
+        }
+        if("M".equals(command)){
+            moveForward();
+        }
+    }
 }

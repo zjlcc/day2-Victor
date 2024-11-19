@@ -131,4 +131,34 @@ public class MarsRoverTest {
         //then
         assertEquals("1:0:S", status);
     }
+    @Test
+    public void should_x_reduce_face_west_when_execute_M_command_given_orient_west(){
+        //given
+        MarsRover marsRover = new MarsRover(0, 0, "W");
+        //when
+        marsRover.executeCommand("M");
+        String status = marsRover.getStatus();
+        //then
+        assertEquals("-1:0:W", status);
+    }
+    @Test
+    public void should_face_west_when_execute_L_command_given_orient_north(){
+        //given
+        MarsRover marsRover = new MarsRover(0, 0, "N");
+        //when
+        marsRover.executeCommand("L");
+        String status = marsRover.getStatus();
+        //then
+        assertEquals("0:0:W", status);
+    }
+    @Test
+    public void should_face_west_when_execute_R_command_given_orient_south(){
+        //given
+        MarsRover marsRover = new MarsRover(0, 0, "S");
+        //when
+        marsRover.executeCommand("R");
+        String status = marsRover.getStatus();
+        //then
+        assertEquals("0:0:W", status);
+    }
 }
