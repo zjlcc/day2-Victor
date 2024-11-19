@@ -39,4 +39,8 @@ public class MarsRover {
     public void turnLeft(){
         direction = this.turnLeftMap.get(direction);
     }
+
+    public void turnRight(){
+        direction = this.turnRightMap.get(direction);
+    }
 }
