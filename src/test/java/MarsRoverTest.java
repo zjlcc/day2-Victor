@@ -5,7 +5,7 @@ public class MarsRoverTest {
     @Test
     public void should_initialize_mars_rover(){
         //given
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+        MarsRover marsRover = new MarsRover();
         //when
         String status = marsRover.getStatus();
         //then

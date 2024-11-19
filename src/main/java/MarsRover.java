@@ -9,19 +9,19 @@ public class MarsRover {
     private Map<String, String> turnRightMap;
     private void initTurnMap(){
         turnLeftMap = new HashMap<>();
-        turnLeftMap.put("N","W");
-        turnLeftMap.put("W","S");
-        turnLeftMap.put("S","E");
-        turnLeftMap.put("E","N");
+        turnLeftMap.put(Direction.DIRECTION_N,Direction.DIRECTION_W);
+        turnLeftMap.put(Direction.DIRECTION_W,Direction.DIRECTION_S);
+        turnLeftMap.put(Direction.DIRECTION_S,Direction.DIRECTION_E);
+        turnLeftMap.put(Direction.DIRECTION_E,Direction.DIRECTION_N);
         turnRightMap = new HashMap<>();
-        turnRightMap.put("N","E");
-        turnRightMap.put("E","S");
-        turnRightMap.put("S","W");
-        turnRightMap.put("W","N");
+        turnRightMap.put(Direction.DIRECTION_N,Direction.DIRECTION_E);
+        turnRightMap.put(Direction.DIRECTION_E,Direction.DIRECTION_S);
+        turnRightMap.put(Direction.DIRECTION_S,Direction.DIRECTION_W);
+        turnRightMap.put(Direction.DIRECTION_W,Direction.DIRECTION_N);
     }
 
     public MarsRover(){
-        direction = "N";
+        direction = Direction.DIRECTION_N;
         initTurnMap();
     }
 
@@ -46,16 +46,16 @@ public class MarsRover {
 
     public void moveForward(){
         switch (direction) {
-            case "N":
+            case Direction.DIRECTION_N:
                 yCoordinate++;
                 break;
-            case "S" :
+            case Direction.DIRECTION_S:
                 yCoordinate--;
                 break;
-            case "E" :
+            case Direction.DIRECTION_E:
                 xCoordinate++;
                 break;
-            case "W" :
+            case Direction.DIRECTION_W:
                 xCoordinate--;
                 break;
         }
